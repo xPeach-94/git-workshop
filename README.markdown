@@ -485,45 +485,10 @@ You have learnt :
 9. Pull Requests (including WIP/DRAFT)
 10. Fixing conflicts
 
-Now You can choose two tracks, either Part II (below) which covers time travel and
-mangling your git history, or Part III (even below-er) which covers Github pull
-requests and cat gifs.
+Next time someone is asking you something about Git, you're ready to answer them! Congratulations!
+Want to learn more? Try to create your very own repository, and start playing!
 
-Part II
-=======
-
-Check out the `revert` branch on this repository for further instructions!
-You can always get back to this version of the readme by checking out the master
-branch.
-
-Part III
-========
-
-GitHub
-------
-But, wait. There’s more. What about this distributed sharing thing with
-Git ?
-
-To be able to share, we’ll need a server to host our git repositiories.
-GitHub (<a href="https://github.com/">github.com</a>) is probably the
-easiest place to begin with.
-
-Login or sign up with GitHub
-----------------------------
-
-If you've already got an account you can skip on to creating the repo on
-github, or forking this repository and cloning it down to your local machine.
-
-Otherwise...
-
-Go <a href="https://github.com/signup">sign up for an account</a> at
-GitHub; Or login into your GitHub account if you had previously signed
-up.
-
-Hint: You may need to setup git cache your GitHub password - see
-<a href="https://help.github.com/articles/set-up-git">https://help.github.com/articles/set-up-git</a>
-
-Then come back here, we’ll wait.
+I wish you a wonderful day!
 
 Create your first GitHub repository
 -----------------------------------
