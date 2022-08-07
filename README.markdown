@@ -22,7 +22,7 @@ As we're going to use `Github` during this workshop. Create a Github account on 
 If you've created an account, open your terminal and type:
 `cd ~/.ssh && ssh-keygen`
 
-Press ENTER twice, until you'll receive a key (you'll see something with [RSA 3072] ending with [SHA256] and then some characters below).
+Press ENTER twice if you don't want to set a password for now, but otherwise follow the instructions in your terminal, until you'll receive a key (you'll see something with [RSA 3072] ending with [SHA256] and then some characters below).
 Now type:
 
 On OS X run: `cat id_rsa.pub | pbcopy`
@@ -36,7 +36,6 @@ Here click on `SSH and GPG keys`.
 
 Click on `New SSH Key`. By `Title` enter what computer you're using and to identify for what you're using it. Such as: Mac Sogeti Jeroen
 In the Key, you paste what you just copied: CTRL + V (or mac: CMD + V).
-
 
 First thing to do is to setup your identity. This identifies you to
 other people who download the project.
@@ -372,6 +371,31 @@ Git gives an error message stating how to fix your issue. Can you figure it out 
 Now go to our online repository on Github using this link:
 `https://github.com/JeroenEgelmeers/git-workshop`
 
+- Click on the `Pull Request` tab.
+- Click on the green button `New pull request`
+- Now you see two boxes, "base: {branch-name}" and "compare: {branch-name}"
+    - Click on the `compare` box, and select your branch.
+    - Make sure the base is on `develop`
+- Now there will be a new button `Create pull request` click on it to open your Pull Request.
+
+Now you can edit your Pull Request. Github has an option to create "draft" Pull Requests. This is following the early pull request strategy which was explained to you during the presentaiton.
+It's helpfull to get feedback along the way. But in some repostiries (such as Bitbucket) this feature is not available. In this case you could change the title, and put "WIP" or "DRAFT" in front of it. This way others know, you're still working on it.
+Let's just create a Draft Pull Request and change nothing in the title or textbox. You can simple click on the arrow next to the green button "Create pull request".
+
+If you click on the arrow, the option for a "Draft Pull Request" will be shown.
+- Click on "Draft pull request"
+- The button now will change to "Draft pull request". Click on it. 
+
+Well done! Your draft pull request was created!
+
+As soon as you're done with your code, and it can be set to the "Pull Request" status (and thus is ready to merge), click on the "Ready for review" button in your screen.
+Let's do that!
+- Click on the "Ready for review" button
+- If nothing is wrong, and there are no merge conflicts, you should now have a button "Merge pull request". If you click that button, your changes will be merged to develop. But the repository you're using has rules. You need atleast one reviewer to accept your changes. Ask the workshop crew to review your branch to continue.
+- When accepted, merge your PR!
+
+Congratulations! You have worked yourself through you very first Pull Request!
+
 You're fast! Here are some extra things to try!
 ---------------
 
@@ -392,7 +416,7 @@ the code below to set it up (don’t worry if you can’t understand it)
     $ git checkout alpher
 
 You should now have a new branch called `alpher`. Try merging that
-branch into `master` now and fix the ensuing conflict.
+branch into `develop` now and fix the ensuing conflict.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png)
 Stuck? Ask for help from the workshop staff
@@ -445,19 +469,21 @@ Stuck? Ask for help from the workshop staff
 
 Congratulations. You have fixed the conflict. All is good in the world.
 
-Fin
+Congratulations! You've completed the workshop!
 ---
 
 You have learnt :
 
-1.  Clone a repository
-2.  Commit files
-3.  Check status
-4.  Check diff
-5.  Undoing changes
-6.  Branching and merging
-7.  Fixing conflicts
-
+1. How to install GIT
+2. How to use Github (and set your security)
+3. Clone a repository 
+4. Commit files 
+5. Check status 
+6. Check diff 
+7. Undoing changes 
+8. Branching and merging 
+9. Pull Requests (including WIP/DRAFT)
+10. Fixing conflicts
 
 Now You can choose two tracks, either Part II (below) which covers time travel and
 mangling your git history, or Part III (even below-er) which covers Github pull
@@ -517,12 +543,6 @@ Fork a repo
 Go to [this tutorial](https://help.github.com/articles/fork-a-repo)
 Then come back here, we’ll wait.
 
-Let’s collaborate !
--------------------
-
-Check out the `pull_request` branch on this repository for further instructions!
-You can always get back to this version of the readme by checking out the master branch.
-
 Fin
 ---
 
@@ -549,6 +569,8 @@ Author
 This work is licensed under the Creative Commons
 Attribution-NonCommercial-ShareAlike 3.0 License\
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">http://creativecommons.org/licenses/by-nc-sa/3.0/</a>\
-Author: Thong Kuah\
+Author: Thong Kuah
 Contributors: Andy Newport, Nick Malcolm
+
+Was editted for internal use by Jeroen Egelmeers
 
