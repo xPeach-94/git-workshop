@@ -241,7 +241,7 @@ Stuck? Ask for help from the workshop staff
 Branching
 ---------
 
-Most large code bases have at least two branches - a ‘master’ branch and a
+Most large code bases have at least two branches - a ‘master’ or 'main' branch and a
 ‘development’ branch. The master branch is code which is OK to be deployed
 on to a website, or downloaded by customers. The development branch
 allows developers to work on features which might not be bug free. Only
@@ -392,7 +392,7 @@ the code below to set it up (don’t worry if you can’t understand it)
     $ git checkout alpher
 
 You should now have a new branch called `alpher`. Try merging that
-branch into `master` now and fix the ensuing conflict.
+branch into `develop` now and fix the ensuing conflict.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png)
 Stuck? Ask for help from the workshop staff
@@ -400,30 +400,29 @@ Stuck? Ask for help from the workshop staff
 Fixing a conflict
 -----------------
 
-You should see a `conflict` with the `gamow.txt` file. This means that
-the same line of text was edited and committed on both the master branch
+You should see a `conflict` with the `alpher.txt` file. This means that
+the same line of text was edited and committed on both the develop branch
 and the alpher branch. The output below basically tells you the current
 situation :
 
-    Auto-merging gamow.txt
-    CONFLICT (content): Merge conflict in gamow.txt
+    Auto-merging alpher.txt
+    CONFLICT (content): Merge conflict in alpher.txt
     Automatic merge failed; fix conflicts and then commit the result.
 
-If you open the `gamow.txt` file, you will see something similar as
+If you open the `alpher.txt` file, you will see something similar as
 below:
 
-    $ cat gamow.txt
+    $ cat alpher.txt
     <<<<<<< HEAD
-    It was eventually recognized that most of the heavy elements observed in the present universe are the result of stellar nucleosynthesis (http://en.wikipedia.org/wiki/Stellar_nucleosynthesis) in stars, a theory largely developed by Bethe.
+    Some changes
     =======
 
-    http://en.wikipedia.org/wiki/Stellar_nucleosynthesis
-    Stellar nucleosynthesis is the collective term for the nuclear reactions taking place in stars to build the nuclei of the elements heavier than hydrogen. Some small quantity of these reactions also occur on the stellar surface under various circumstances. For the creation of elements during the explosion of a star, the term supernova nucleosynthesis is used.
+    Some other changes
     >>>>>>> alpher
 
 Git uses pretty much standard conflict resolution markers. The top part
 of the block, which is everything between `<<<<<< HEAD` and `======` is
-what was in your current branch.\
+what was in your current branch.
 The bottom half is the version that is present from the `alpher` branch.
 To resolve the conflict, you either choose one side or merge them as you
 see fit.
@@ -432,7 +431,8 @@ For example, I might decide to choose the version from the `alpher`
 branch.
 
 Now, try to **fix the merge conflict**. Pick the text that you think is
-better (Ask for help if stumped)
+better (Ask for help if stumped). You can also try using the Github Pull Request if you're stuck!
+Github has nice options to edit in the webpage itself!
 
 Once I have done that, I can then mark the conflict as fixed by using
 `git add` and `git commit`.
@@ -440,7 +440,7 @@ Once I have done that, I can then mark the conflict as fixed by using
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png)
 Stuck? Ask for help from the workshop staff
 
-    $ git add gamow.txt
+    $ git add alpher.txt
     $ git commit -m "Fixed conflict"
 
 Congratulations. You have fixed the conflict. All is good in the world.
@@ -457,7 +457,6 @@ You have learnt :
 5.  Undoing changes
 6.  Branching and merging
 7.  Fixing conflicts
-
 
 Now You can choose two tracks, either Part II (below) which covers time travel and
 mangling your git history, or Part III (even below-er) which covers Github pull
