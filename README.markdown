@@ -466,8 +466,21 @@ Stuck? Ask for help from the workshop staff
 
     $ git add alpher.txt
     $ git commit -m "Fixed conflict"
+    
+Normally, you should now "`git push`" your commit. How ever, don't do this at this time to make sure others can also try this excersise!
 
 Congratulations. You have fixed the conflict. All is good in the world.
+
+Tools!
+-----------------
+Tools make your life a lot easier. Using a tool, you don't have to remember all the different commands all the time you've just learned. So let's also try a tool to practice and show you the difference. As you've learned during the presentation, a tool is nice and can make your life easier, but having knowledge about what a tool does behind the scene, is very important! You now learned how to do it via command line, this way you actually know what a tool does when clicking on a button.
+
+Now let's try to do the merging step again, but then using `Github Desktop`.
+
+- Go to: https://desktop.github.com/ and download the tool.
+- Can you figure out how to add a repository? (add the repository you're currently on: `git@github.com:JeroenEgelmeers/git-workshop.git`)
+- Now go back to the `alpher` branch, and undo your merge. You can switch branches if needed using Github Desktop! Can you find the right button?
+- When you've undone your changes, you can try merging again via Github Desktop. You'll find out that merging via a tool is much easier. It gives you options to merge, and helps you making the right decisions. Try to merge again, but please do not push it to the repo so others can try it also!
 
 Congratulations! You've completed the workshop!
 ---
@@ -484,6 +497,7 @@ You have learnt :
 8. Branching and merging 
 9. Pull Requests (including WIP/DRAFT)
 10. Fixing conflicts
+11. Using GIT via Github Desktop
 
 Next time someone is asking you something about Git, you're ready to answer them! Congratulations!
 Want to learn more? Try to create your very own repository, and start playing!
