@@ -21,9 +21,17 @@ As we're going to use `Github` during this workshop. Create a Github account on 
 
 If you've created an account, open your terminal and type:
 `cd ~/.ssh && ssh-keygen`
-
 Press ENTER twice if you don't want to set a password for now, but otherwise follow the instructions in your terminal, until you'll receive a key (you'll see something with [RSA 3072] ending with [SHA256] and then some characters below).
-Now type:
+
+!!! If this doesn't work, then on Windows do this:
+- Open PowerShell (an application on your computer, you can find it via the search bar of your menu by typing in "PowerShell".
+- Type: `ssh-keygen -t rsa -C "you@example.com"` : Change you@example.com to your Github email address (but don't remove the "").
+- Press ENTER
+- Press ENTER
+- Press ENTER
+
+- Now a key is generated. Now move to the folder that you created: `cd .ssh`.
+- and then continue with the following instructions:
 
 On OS X run: `cat id_rsa.pub | pbcopy`
 
