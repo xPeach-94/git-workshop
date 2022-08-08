@@ -21,9 +21,17 @@ As we're going to use `Github` during this workshop. Create a Github account on 
 
 If you've created an account, open your terminal and type:
 `cd ~/.ssh && ssh-keygen`
-
 Press ENTER twice if you don't want to set a password for now, but otherwise follow the instructions in your terminal, until you'll receive a key (you'll see something with [RSA 3072] ending with [SHA256] and then some characters below).
-Now type:
+
+!!! If this doesn't work, then on Windows do this:
+- Open PowerShell (an application on your computer, you can find it via the search bar of your menu by typing in "PowerShell".
+- Type: `ssh-keygen -t rsa -C "you@example.com"` : Change you@example.com to your Github email address (but don't remove the "").
+- Press ENTER
+- Press ENTER
+- Press ENTER
+
+- Now a key is generated. Now move to the folder that you created: `cd .ssh`.
+- and then continue with the following instructions:
 
 On OS X run: `cat id_rsa.pub | pbcopy`
 
@@ -68,6 +76,12 @@ called `git-workshop`. This is your `working directory`
     $ cd git-workshop
     $ ls
 
+On Windows you use `dir` in stead of `ls` so:
+
+    $ cd git-workshop
+    $ dir
+
+
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png)
 Stuck? Ask for help from the workshop staff
 
@@ -75,6 +89,7 @@ For the curious, you should also see the `.git` subdirectory. This is
 where all your repository’s data and history is kept.
 
     $ ls -a .git
+(on Windows it will be `dir` instead of `ls`).
 
 You will see :
 
@@ -87,8 +102,13 @@ Now, let’s try adding some files into the project. Create a couple of
 files.
 
 Let’s create two files named `bob.txt` and `alice.txt`. You can do this by using the command below, or simple just create them in the folder by adding the files manually.
+Mac:
 
     $ touch alice.txt bob.txt
+
+Windows:
+
+    $ echo.> alice.txt bob.txt
 
 Let’s use a mail analogy.
 
@@ -303,7 +323,14 @@ used to switch to the branch with your name above)
 
 Now, where’s our `test.txt` file ?
 
+Mac: 
+
     $ ls
+    README.textile  alice.txt   bob.txt     alpher.txt
+    
+Windows:
+
+    $ dir
     README.textile  alice.txt   bob.txt     alpher.txt
 
 As you can see the new file you created in the other branch has
