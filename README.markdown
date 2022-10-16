@@ -88,8 +88,17 @@ Stuck? Ask for help from the workshop staff
 For the curious, you should also see the `.git` subdirectory. This is
 where all your repository’s data and history is kept.
 
+Mac:
+
     $ ls -a .git
-(on Windows it will be `dir` instead of `ls`).
+
+Windows (Command Prompt):
+
+    $ .git
+    
+Windows (powershell):
+
+    $ ls .git
 
 You will see :
 
@@ -98,7 +107,7 @@ You will see :
 The staging area
 ----------------
 
-Now, let’s try adding some files into the project. Create a couple of
+Now, let’s try adding some files into the project (in your own branch). Create a couple of
 files.
 
 Let’s create two files named `bob.txt` and `alice.txt`. You can do this by using the command below, or simple just create them in the folder by adding the files manually.
@@ -106,10 +115,25 @@ Mac:
 
     $ touch alice.txt bob.txt
 
-Windows:
+Windows (Command Prompt):
 
     $ echo.> alice.txt bob.txt
 
+Windows (Powershell):
+
+    $ New-Item alice.txt,bob.txt
+
+You can check if creation of these files was succesfull by checking if they appear in the 'staging area. You do this by using:
+
+    $git status
+    
+You should see something similar to:
+    On branch feature/mynewbranch
+    Untracked files:
+      (use "git add <file>..." to include in what will be committed)
+            alice.txt
+            bob.txt
+    
 Let’s use a mail analogy.
 
 In Git, you first add content to the `staging area` by using `git add`.
@@ -120,6 +144,22 @@ You finalize the process and record it into the git index by using
 Let’s add the files to the staging area
 
     $ git add alice.txt bob.txt
+    
+When using "git status" again, you'll see that they've been added!
+
+    $git status
+    
+You should see something similar to:
+    On branch feature/mynewbranch
+    Changes to be committed:
+      (use "git restore --staged <file>..." to unstage)
+            new file:   alice.txt
+            new file:   bob.txt
+    
+This is especially usefull if you're feeling bold, and would like to add all changes in one go by using
+
+    $ git add .
+
 
 Committing
 ----------
@@ -139,15 +179,19 @@ We should now have a new commit. To see all the commits so far, use
 `git log`
 
     $ git log
-
+   
 The log should show all commits listed from most recent first to least
 recent. You would see various information like the name of the author,
 the date it was committed, a commit SHA number, and the message for the
 commit.
 
 You should also see your most recent commit, where you added the two new
-files in the previous section. However, git log does not show the files
-involved in each commit. To view more information about a commit, use
+files in the previous section. 
+    
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png)
+Stuck? Use 'q' to get out of this overview of git log.
+    
+Git log does not show the files involved in each commit. To view more information about a commit, use
 `git show`.
 
     $ git show
@@ -342,11 +386,18 @@ now present.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png)
 Stuck? Ask for help from the workshop staff
+    
+Sidenote. The naming of the branch is important for yourself and others to be able to find and understand what's been changed. There are several resources online on naming conventions. Suggestions are in example: 
+- use category words like: Wip/Feat/Bug/Junk/Test
+- use slashes / to identify project, apps or personal names
+- add unique ids
+- add a short description
 
-Merging
+
+Merging two local branches
 -------
 
-We now try out merging. Eventually you will want to merge two branches
+We now try out merging. Eventually you will want to merge two local branches
 together after the conclusion of work.
 `git merge` allows you to do that.
 
@@ -374,6 +425,20 @@ specify the branch you want to merge.
 
 At this point, you can also try out `gitk` to visualize the changes and
 how the two branches have merged
+    
+Pull
+-------
+When working in a big project you can safely asume that there will always be someone working and pushing changes to main. To get those changes you need to do update your local repository with the remote changes on main. That can be done using fetch before the git merge: 
+    
+    $ git fetch main
+    
+In such projects though, you could also start using an alternative, the git pull:
+    
+    $ git pull origin main
+    
+This will do the same as a git fech & git merge combined. 
+    
+Either way, having your work updated with the current version of main will increase your chances of the next step (Pull Request) succeeding.
 
 Pull Request
 -------
@@ -392,7 +457,7 @@ Do you still remember how to create the branch? If not, scroll back up, and find
 
     git push
 
-Probably you got an error now. You did not yet create the branch on the online repostiroy, but only local.
+Probably you got an error now. You did not yet create the branch on the online repository, but only local.
 Git gives an error message stating how to fix your issue. Can you figure it out yourself?
 
 Now go to our online repository on Github using this link:
@@ -406,7 +471,7 @@ Now go to our online repository on Github using this link:
 - Now there will be a new button `Create pull request` click on it to open your Pull Request.
 
 Now you can edit your Pull Request. Github has an option to create "draft" Pull Requests. This is following the early pull request strategy which was explained to you during the presentaiton.
-It's helpfull to get feedback along the way. But in some repostiries (such as Bitbucket) this feature is not available. In this case you could change the title, and put "WIP" or "DRAFT" in front of it. This way others know, you're still working on it.
+It's helpfull to get feedback along the way. But in some repositories (such as Bitbucket) this feature is not available. In this case you could change the title, and put "WIP" or "DRAFT" in front of it. This way others know, you're still working on it.
 Let's just create a Draft Pull Request and change nothing in the title or textbox. You can simple click on the arrow next to the green button "Create pull request".
 
 If you click on the arrow, the option for a "Draft Pull Request" will be shown.
@@ -496,8 +561,8 @@ Stuck? Ask for help from the workshop staff
     
 Normally, you should now "`git push`" your commit. How ever, don't do this at this time to make sure others can also try this excersise!
 
-Congratulations. You have fixed the conflict. All is good in the world.
-
+Congratulations. You have fixed the conflict. All is good in the world.    
+    
 Tools!
 -----------------
 Tools make your life a lot easier. Using a tool, you don't have to remember all the different commands all the time you've just learned. So let's also try a tool to practice and show you the difference. As you've learned during the presentation, a tool is nice and can make your life easier, but having knowledge about what a tool does behind the scene, is very important! You now learned how to do it via command line, this way you actually know what a tool does when clicking on a button.
