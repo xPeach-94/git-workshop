@@ -468,8 +468,8 @@ Do you still remember how to create the branch? If not, scroll back up, and find
 Probably you got an error now. You did not yet create the branch on the online repository, but only local.
 Git gives an error message stating how to fix your issue. Can you figure it out yourself?
 
-Now go to our online repository on Github using this link:
-`https://github.com/JeroenEgelmeers/git-workshop`
+Now go to our online repository on Github using the newly created fork on your profile. Go to Github, click on your profile image. Then on "Your profile".
+Then click on "Repositories" on the menu next to your profile image. And find the forked repository there. Click then on the green "Code" button to get the right clone URL.
 
 - Click on the `Pull Request` tab.
 - Click on the green button `New pull request`
