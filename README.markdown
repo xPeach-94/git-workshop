@@ -333,8 +333,7 @@ Try git branch again to check which branch you are currently on:
       jeroen-egelmeers
     * main
 
-The new branch is now created. Now let’s work in that branch. To switch
-to the new branch:
+The new branch is now created. Now let’s work in that branch. By using `git checkout -b jeroen-egelmeers` you directly switched to that branch. If you did something else in the meantime, and want to switch back to the branch to work on it use:
 
     $ git checkout jeroen-egelmeers
 
@@ -597,8 +596,9 @@ You have learnt :
 7. Undoing changes 
 8. Branching and merging 
 9. Pull Requests (including WIP/DRAFT)
-10. Fixing conflicts
-11. Using GIT via Github Desktop
+10. Forking excisting projects
+11. Fixing conflicts
+12. Using GIT via Github Desktop
 
 Next time someone is asking you something about Git, you're ready to answer them! Congratulations!
 Want to learn more? Try to create your very own repository, and start playing!
@@ -644,5 +644,5 @@ This work is licensed under the Creative Commons
 Attribution-NonCommercial-ShareAlike 3.0 License\
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">http://creativecommons.org/licenses/by-nc-sa/3.0/</a>\
 This workshop was based on the Workshop from Thong Kuah, and exteded by Jeroen Egelmeers.
-Other contributors: lliza
+Contributors to this version: lliza
 
