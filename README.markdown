@@ -443,6 +443,15 @@ Either way, having your work updated with the current version of main will incre
 Pull Request
 -------
 In modern development, we work with Pull Requests. Here you can ask your peers to review your code. Let's try that out in Github!
+To do this, we first have to fork this repository. You can do this by clicking on the right top of this workshop on "Fork". More information about forking a repository you can find here: [this tutorial](https://help.github.com/articles/fork-a-repo)
+
+If you have forked the workshop to your own Github profile, you can start creating pull requests on that version.
+So:
+- Clone the version you just forked to your own profile to your local environment.
+
+Tip: No clue how to clone anymore? Check the "clone" part of this workshop above!
+
+Follow the steps about Pull Requests:
 
 - Create a new branch with again your name, but then add `-PR` after it. So for example:
   `jeroen-egelmeers-PR`
@@ -608,20 +617,14 @@ then share with others
 
 Then come back here, we’ll wait.
 
-Fork a repo
------------
-
-Go to [this tutorial](https://help.github.com/articles/fork-a-repo)
-Then come back here, we’ll wait.
-
 Fin
 ---
 
 You have learnt:
 
-1.  Forking a repo at GitHub
-2.  Git push
-3.  Git pull
+1. Creating your own repository! 
+
+Congratulations! you've finished this workshop!
 
 ### References and Further reading
 
@@ -640,8 +643,6 @@ Author
 This work is licensed under the Creative Commons
 Attribution-NonCommercial-ShareAlike 3.0 License\
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">http://creativecommons.org/licenses/by-nc-sa/3.0/</a>\
-Author: Thong Kuah
-Contributors: Andy Newport, Nick Malcolm
-
-Was editted for internal use by Jeroen Egelmeers
+This workshop was based on the Workshop from Thong Kuah, and exteded by Jeroen Egelmeers.
+Other contributors: lliza
 
